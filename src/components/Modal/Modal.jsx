@@ -60,9 +60,7 @@ const FooterModal=()=>{
             <ButtonBuyContainer>
                 <Link 
                     onClick={()=>{
-                    return(
-                        user ? navigate('/congrats') : navigate('/login')
-                    )
+                        navigate('/congrats')
                     }}
 
                 style={{textDecoration:'none', color:'#D7D0DE' }}>
