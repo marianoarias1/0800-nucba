@@ -59,12 +59,12 @@ const FooterModal=()=>{
 
             <ButtonBuyContainer>
                 <Link 
+                style={{textDecoration:'none', color:'#D7D0DE' }}>
+                    <ButtonBuyStyled
                     onClick={()=>{
                         navigate('/congrats')
                     }}
-
-                style={{textDecoration:'none', color:'#D7D0DE' }}>
-                    <ButtonBuyStyled
+                    
                     disabled={!items.length}>
                         Realizar Pedido
                     </ButtonBuyStyled>
