@@ -37,6 +37,7 @@ const ProductsCart=({name,price,src, quantity,id})=>{
 
 
 const FooterModal=()=>{
+    const dispatch= useDispatch()
     const {items, totalCost}=useSelector(state=>state.cart)
     const {user}= useSelector(state=>state.user)
     const navigate= useNavigate()
@@ -59,11 +60,12 @@ const FooterModal=()=>{
 
             <ButtonBuyContainer>
                 <Link 
+                to='/congrats'
+                onClick={()=>{
+                    dispatch(clearCart())
+                }}
                 style={{textDecoration:'none', color:'#D7D0DE' }}>
                     <ButtonBuyStyled
-                    onClick={()=>{
-                        navigate('/congrats')
-                    }}
                     
                     disabled={!items.length}>
                         Realizar Pedido
